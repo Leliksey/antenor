@@ -34,4 +34,39 @@ $(document).ready(function() {
     const ConnectionStateData = [{labels:ConnectionStatexArray, values:ConnectionStateyArray, hole:.66, type:"pie"}];
 
     Plotly.newPlot("ConnectionState", ConnectionStateData, ConnectionStateLayout);
+
+
+    // Переключение графиков
+    $(document).on("click", ".btn-grafic", function(e) {
+        if($(e.target).hasClass("active")) {
+            return
+        } else {
+            $(".btn-grafic").removeClass("active");
+            $(this).addClass("active");
+            $(".grafic img").toggleClass("hide");
+        }
+    });
+
+    // Установка значений прогресс бар
+    function setProgressBarValue(progressBar, value) {
+        var max = progressBar.attr('aria-valuemax');
+        var percentage = (value / max) * 100;
+        progressBar.css('width', percentage + '%').attr('aria-valuenow', value);
+    }
+
+    $(document).ready(function() {
+        var progressBars = $('.progress-bar');
+        // Установка значений для каждого прогресс-бара
+        setProgressBarValue($(progressBars[0]), 600);
+        setProgressBarValue($(progressBars[1]), 300);
+        setProgressBarValue($(progressBars[2]), 900);
+    });
+
+
+    $(".js-select2").select2({
+        closeOnSelect : false,
+        placeholder : "Все объекты",
+        allowHtml: true,
+        allowClear: true
+    });
 });

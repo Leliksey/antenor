@@ -157,9 +157,10 @@ main {
     background-color: #fff;
     border-radius: 12px;
     padding: 20px;
+    /* height: 100%; */
 }
 .col.ordinary {
-    /* max-height: 110px; */
+    max-height: 110px;
 }
 .col.medium {
     /* max-height: 250px; */
@@ -171,6 +172,17 @@ main {
     width: 8px;
     height: 8px;
     border-radius: 50%;
+}
+.status-info {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.94px;
+    text-align: center;
+    width: 100%;
+    max-width: 106px;
+    padding: 4px 24px;
+    display: block;
+    border-radius: 4px;
 }
 .status-red {
     background-color: #ff000099;
@@ -198,6 +210,17 @@ main {
 }
 table {
     position: relative;
+}
+table th {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 18.15px;
+    color: #949494;
+    border-bottom: 0.82px solid #efefef;
+    padding: 12px 0;
+}
+table td {
+    padding: 14px 0;
 }
 .diagram {
     max-width: 150px;
@@ -270,7 +293,7 @@ g.slice:hover g.slicetext {
 .main-notifications .text-date {
     margin-top: 0;
     margin-left: 10px;
-    color: #B0B0B0;
+    color: #b0b0b0;
 }
 .main-notifications h3 {
     font-size: 16px;
@@ -282,5 +305,152 @@ g.slice:hover g.slicetext {
 .main-notifications-list {
     display: flex;
     flex-direction: column;
-    row-gap: 27px;
+    row-gap: 18px;
 }
+.hide {
+    display: none;
+}
+.btn-grafic .active {
+    display: none;
+}
+.btn-grafic.active img {
+    display: none;
+}
+.btn-grafic.active .active {
+    display: block;
+}
+.drivers-activity .avatar {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+}
+.col .name {
+    font-size: 14.5px;
+    font-weight: 600;
+    line-height: 17.54px;
+    color: #000;
+    display: inline-block;
+}
+.status {
+
+}
+.status-active {
+    background-color: #16C09814;
+    color: #16C098;
+}
+.status-free {
+    background-color: #AFAFAF1A;
+    color: #5C5C5C;
+}
+.status-busy {
+    background-color: #FF00000A;
+    color: #FF0000;
+}
+col.top {
+    max-width: 692px;
+    width: 100%;
+}
+.col.count {
+    max-width: 450px;
+}
+.top img {
+    max-width: 67px;
+}
+.progress {
+    border-radius: 100px;
+    background-color: #d7dbfb;
+    position: relative;
+    
+}
+.progress-oil {
+    margin: 0 20px 0 10px;
+}
+.progress-distance {
+    margin: 0 35px 0 10px;
+}
+.table-progress {
+    overflow: hidden;
+}
+.table-progress th {
+    border: none;
+}
+.table-progress th span {
+    position: relative;
+}
+.table-progress th span::after {
+    content: "";
+    width: 1px;
+    height: 100vh;
+    background-color: #D7D7D7;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    margin: auto;
+    z-index: 0;
+}
+
+.table-progress th:nth-child(5) {
+    text-align: right;
+}
+.table-progress td:last-child {
+    text-align: center;
+}
+.progress-bar {
+   background: linear-gradient(143.13deg, #007DF1 5.36%, #5932EA 94.64%);
+}
+.select2-container {
+    /* min-width: 400px; */
+  }
+  
+  .select2-results__option {
+    padding-right: 20px;
+    vertical-align: middle;
+  }
+  .select2-results__option:before {
+    content: "";
+    display: inline-block;
+    position: relative;
+    height: 20px;
+    width: 20px;
+    border: 2px solid #e9e9e9;
+    border-radius: 4px;
+    background-color: #fff;
+    margin-right: 20px;
+    vertical-align: middle;
+  }
+  .select2-results__option[aria-selected=true]:before {
+    font-family:fontAwesome;
+    content: "\f00c";
+    color: #fff;
+    background-color: #f77750;
+    border: 0;
+    display: inline-block;
+    padding-left: 3px;
+  }
+  .select2-container--default .select2-results__option[aria-selected=true] {
+      background-color: #fff;
+  }
+  .select2-container--default .select2-results__option--highlighted[aria-selected] {
+      background-color: #eaeaeb;
+      color: #272727;
+  }
+  .select2-container--default .select2-selection--multiple {
+      margin-bottom: 10px;
+  }
+  .select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple {
+      border-radius: 4px;
+  }
+  .select2-container--default.select2-container--focus .select2-selection--multiple {
+      border-color: #f77750;
+      border-width: 2px;
+  }
+  .select2-container--default .select2-selection--multiple {
+      border-width: 2px;
+  }
+  .select2-container--open .select2-dropdown--below {
+      
+      border-radius: 6px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  
+  }

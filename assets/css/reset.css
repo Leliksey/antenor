@@ -23,7 +23,7 @@ button {
     height: max-content;
 }
 img {
-    width: auto;
+    width: 100%;
 }
 label {
     margin: 0;
