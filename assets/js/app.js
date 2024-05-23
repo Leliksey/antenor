@@ -34,6 +34,16 @@ $(document).ready(function() {
     const ConnectionStateData = [{labels:ConnectionStatexArray, values:ConnectionStateyArray, hole:.66, type:"pie"}];
 
     Plotly.newPlot("ConnectionState", ConnectionStateData, ConnectionStateLayout);
+    
+    // Диаграмма состояние движения
+    // const countObjectsxArray = ["", "", "", ""];
+    // const countObjectsyArray = [13, 4, 9, 0];
+
+    // const countObjectsLayout = {title:""};
+
+    // const countObjectsData = [{labels:countObjectsxArray, values:countObjectsyArray, hole:.66, type:"pie"}];
+
+    // Plotly.newPlot("countObjects", countObjectsData, countObjectsLayout);
 
 
     // Переключение графиков
