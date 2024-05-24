@@ -79,4 +79,11 @@ $(document).ready(function() {
         allowHtml: true,
         allowClear: true
     });
+
+    $(document).on("click", "#burger", function() {
+        $(".navbar-collapse").addClass("open")
+    })
+    $(document).on("click", "#burger-close", function() {
+        $(".navbar-collapse").removeClass("open")
+    })
 });

@@ -17,6 +17,12 @@ h3 {
 .navbar {
     padding: 20px 5px;
 }
+@media(max-width: 576px) {
+    .navbar {
+        padding: 10px 5px;
+    }
+}
+
 .navbar-custom {
     background-color: #fff;
     border-bottom: 1px solid #cccccc;
@@ -32,6 +38,12 @@ h3 {
     align-items: center;
     column-gap: 10px;
 }
+@media(max-width: 1200px) {
+    .navbar-custom .nav-item .nav-link {
+        border: none;
+    }
+}
+
 .navbar-custom .nav-item .nav-link img {
     width: 13px;
     height: 16px;
@@ -46,6 +58,26 @@ h3 {
 .navbar-custom .dropdown-menu {
     min-width: 8rem;
 }
+@media(max-width: 1200px) {
+    .navbar-custom .dropdown-menu {
+        border: none;
+        min-width: 100vw;
+    }
+}
+@media(max-width: 1350px) {
+    .flex-max-xxl-column {
+        flex-direction: column !important;
+        row-gap: 10px;
+        
+    }
+}
+@media(max-width: 576px) {
+    .flex-max-xxl-column {
+        width: -webkit-fill-available;
+    }
+}
+
+
 .navbar-brand img {
     width: 100%;
     max-width: 107px;
@@ -62,9 +94,19 @@ h3 {
     margin-right: 25px;
     position: relative;
 }
+.navbar-nav-scroll::-webkit-scrollbar {
+    height: 5px;
+    background-color: #f5f5f5;
+    border-radius: 16px;
+}
+.navbar-nav-scroll::-webkit-scrollbar-thumb {
+    background-color: #c3c3c3;
+    border-radius: 16px;
+}
 .navbar-nav-scroll {
-    width: 58vw;
+    width: 54vw;
     overflow: auto;
+    padding-bottom: 3px;
 }
 @media(max-width: 1440px) {
     .navbar-nav-scroll {
@@ -76,13 +118,79 @@ h3 {
     .navbar-nav-scroll {
         width: 55vw;
         overflow: auto;
+        height: 100vh;
+    }
+}
+@media(max-width: 992px) {
+    .navbar-nav-scroll {
+        row-gap: 15px;
+        align-items: flex-start;
+    }
+}
+.navbar button[type="submit"] {
+    z-index: 5;
+}
+@media(max-width: 1200px) {
+    .navbar-expand-lg .navbar-collapse {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 10px;
+        width: 50%;
+        position: fixed;
+        right: 0;
+        z-index: 10;
+        background-color: #fff;
+        top: 0;
+        padding: 50px 20px 0;
+        border-left: 1px solid #ccc;
+        transform: translateX(100%);
+        transition: .5s;
+    }
+    .navbar-expand-lg .navbar-collapse.open {
+        transform: translateX(0);
+        transition: .5s;
+    }
+    .navbar-expand-lg .navbar-collapse .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        align-items: flex-start;
+    }
+}
+@media(max-width: 576px) {
+    .navbar-expand-lg .navbar-collapse {
+        width: 70%;
+    }
+}
+.dashboard-filter {
+    position: relative;
+}
+#burger {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    z-index: 5;
+}
+@media(max-width: 576px) {
+    #burger {
+        top: 15px;
     }
 }
 
 .dashboard-filter-tab {
     padding: 13px 20px !important;
 }
+
+@media(max-width: 1350px) and (min-width: 1200px){
+    .dashboard-filter-tabs > div {
+        max-width: 20vw;
+    }
+}
 @media(max-width: 1200px) {
+    .dashboard-filter-tabs > div {
+        max-width: 20vw;
+    }
     .dashboard-filter-tab {
         padding: 13px 30px !important;
     }
@@ -93,6 +201,17 @@ h3 {
     }
 }
 
+.nav_btn {
+    display: none;
+}
+@media(max-width: 1200px) {
+    .nav_btn {
+        display: block;
+        top: 20px;
+        right: 10px;
+        position: absolute;
+    }
+}
 
 .nav_btn img {
     width: 28px;
@@ -119,6 +238,13 @@ h3 {
     top: -3px;
     z-index: 5;
 }
+@media(max-width: 1200px) {
+    .btn-nav-left,
+.btn-nav-right {
+    display: none;
+}
+}
+
 .btn-nav-left img,
 .btn-nav-right img {
     width: auto;
@@ -153,6 +279,11 @@ h3 {
         max-width: 150px;
     }
 }
+@media(max-width: 768px) {
+    .filter-date .input-group {
+        max-width: 120px;
+    }
+}
 
 
 .input-group {
@@ -176,6 +307,12 @@ main {
     background-color: #e8eff3;
     padding: 35px 20px;
 }
+@media(max-width: 1200px) {
+    main  {
+        padding: 20px 10px;    
+    }
+}
+
 .column-item {
     background-color: #fff;
     padding: 20px;
@@ -212,8 +349,14 @@ main {
     background-color: #fff;
     border-radius: 12px;
     padding: 20px;
-    /* height: 100%; */
+    
 }
+@media(max-width: 1570px) and (min-width: 1200px){
+    .main-grid .col {
+        overflow: hidden;
+    }
+}
+
 .col.ordinary {
     max-height: 110px;
 }
@@ -388,8 +531,12 @@ g.slice:hover g.slicetext {
 .btn-grafic.active .active {
     display: block;
 }
+.table-progress-wrapper,
 .drivers-activity-wrapper {
     overflow: auto;
+}
+.table-progress {
+    min-width: 350px;
 }
 .drivers-activity {
     min-width: 600px;
