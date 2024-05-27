@@ -15,36 +15,8 @@ $(document).ready(function() {
         $(this).addClass("btn-primary");
     });
 
-    // Диаграмма состояние соединения
-    const MotionStatexArray = ["Стоят", "Стоят с зажиганием", "Движутся с зажиганием", "Движутся"];
-    const MotionStateyArray = [13, 6, 9, 4];
-
-    const MotionStatelayout = {title:""};
-
-    const MotionStateData = [{labels:MotionStatexArray, values:MotionStateyArray, hole:.66, type:"pie"}];
-
-    Plotly.newPlot("MotionState", MotionStateData, MotionStatelayout);
-
-    // Диаграмма состояние движения
-    const ConnectionStatexArray = ["Не подключены", "Подключены"];
-    const ConnectionStateyArray = [13, 4];
-
-    const ConnectionStateLayout = {title:""};
-
-    const ConnectionStateData = [{labels:ConnectionStatexArray, values:ConnectionStateyArray, hole:.66, type:"pie"}];
-
-    Plotly.newPlot("ConnectionState", ConnectionStateData, ConnectionStateLayout);
     
-    // Диаграмма состояние движения
-    // const countObjectsxArray = ["", "", "", ""];
-    // const countObjectsyArray = [13, 4, 9, 0];
-
-    // const countObjectsLayout = {title:""};
-
-    // const countObjectsData = [{labels:countObjectsxArray, values:countObjectsyArray, hole:.66, type:"pie"}];
-
-    // Plotly.newPlot("countObjects", countObjectsData, countObjectsLayout);
-
+    
 
     // Переключение графиков
     $(document).on("click", ".btn-grafic", function(e) {
@@ -85,5 +57,8 @@ $(document).ready(function() {
     })
     $(document).on("click", "#burger-close", function() {
         $(".navbar-collapse").removeClass("open")
-    })
+    });
+
+
+    
 });
