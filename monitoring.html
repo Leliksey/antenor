@@ -83,8 +83,41 @@
     </nav>
     <div class="content">
         <div class="column-left">
-            <div class="search-bar">
-
+            <div class="container">
+                <div class="search-container">
+                    <div class="search-input-wrapper">
+                        <input type="text" class="form-control search-input rounded" placeholder="Поиск">
+                        <div class="search-clue rounded">
+                            <ul class="search-clue-list">
+                                <li class="search-clue-list-item">Состояние соединения: Подключено</li>
+                                <li class="search-clue-list-item">Состояние соединения: Не подключено</li>
+                                <li class="search-clue-list-item">Заряд батареи: 1-5%</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button class="btn search-button rounded">
+                        <i class="fas fa-filter"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="toolbar d-flex justify-content-between">
+                <div class="toolbar-left d-flex">
+                    <button class="btn btn-primary btn-tool"><i class="fas fa-plus"></i></button>
+                    <button class="btn btn-primary btn-tool"><i class="fas fa-cog"></i></button>
+                    <div class="btn-group toolbar-sort rounded">
+                        <button class="btn btn-light"><i class="fas fa-sort-alpha-down"></i></button>
+                        <button class="btn btn-light"><i class="fas fa-sort-alpha-up"></i></button>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-light"><i class="fas fa-th-large"></i></button>
+                        <button class="btn btn-light"><i class="fas fa-bars"></i> All</button>
+                        <button class="btn btn-light"><i class="fas fa-list"></i></button>
+                    </div>
+                </div>
+                <div class="toolbar-right">
+                    <button class="btn btn-danger"><i class="fas fa-times"></i></button>
+                    <button class="btn btn-primary"><i class="fas fa-check"></i></button>
+                </div>
             </div>
         </div>
         <div id="map" class="map"></div>
