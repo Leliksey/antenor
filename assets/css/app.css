@@ -5,6 +5,7 @@
 /* column-left */
 /* toolbar */
 /* map */
+/* column-left-list */
 
 body {
     font-family: "Fixel Display";
@@ -18,7 +19,18 @@ h3 {
     font-size: 16px;
     color: #909090;
 }
-
+.mt-10 {
+    margin-top: 10px;
+}
+.fw-400 {
+    font-weight: 400 !important;
+}
+.fw-500 {
+    font-weight: 500 !important;
+}
+.fw-700 {
+    font-weight: 700 !important;
+}
 /* navbar */
 .navbar {
     padding: 20px 5px;
@@ -389,7 +401,7 @@ main {
     background-color: #ff000099;
 }
 .status-green {
-    background-color: #94cf96;
+    background-color: #4caf50;
 }
 .status-blue {
     background-color: #80caee;
@@ -661,7 +673,7 @@ col.top {
     border-radius: 4px;
 }
 .select2-container--default.select2-container--focus .select2-selection--multiple {
-    border-color: #f77750;
+    border-color: #fff;
     border-width: 2px;
 }
 .select2-container--default .select2-selection--multiple {
@@ -847,10 +859,28 @@ col.top {
 .toolbar .btn-group {
     margin-right: 5px;
 }
-.toolbar .divider {
-    /* border-left: 1px solid #d3d3d3;
-    height: 24px;
-    margin: 0 10px; */
+.divider {
+    width: 1px;
+    height: 100%;
+    background-color: #000;
+    height: 40px;
+}
+.sort-toolbar {
+    border-left: 1px solid #d0cecf;
+    border-right: 1px solid #d0cecf;
+    column-gap: 10px;
+    padding: 6px 12px;
+}
+.sort-toolbar button {
+    padding: 10px;
+}
+.sort-toolbar button:nth-child(2) {
+    padding: 10px;
+    margin-bottom: -11px;
+    display: grid;
+}
+.sort-toolbar button i {
+    font-size: 24px;
 }
 .btn-tool {
     min-width: 40px;
@@ -858,26 +888,261 @@ col.top {
     padding: 0;
     display: block;
 }
-.toolbar-sort{
-    border: 1px solid #E3E4E5;
+.toolbar-sort {
+    border: 1px solid #e3e4e5;
 }
 .toolbar .btn-group {
     height: max-content;
 }
-.toolbar-sort button{
+.toolbar-sort button {
     padding: 12px;
-    
+
     padding: 10px;
     border-radius: 8px;
 }
-.toolbar-sort button:first-child{
-    border-right: 2px solid #E3E4E5;
+.toolbar-sort button:first-child {
+    border-right: 2px solid #e3e4e5;
 }
-.toolbar-sort i{
+.toolbar-sort i {
     font-size: 16px;
 }
 /* map */
 .map {
     height: calc(100vh - 82px);
     width: 100vw;
+}
+.toolbar-right {
+    column-gap: 16px;
+    height: max-content;
+}
+.toolbar-right img {
+    column-gap: 16px;
+    height: max-content;
+    min-width: 12px;
+}
+.custom-checkbox {
+    height: 20px;
+}
+/* для элемента input c type="checkbox" */
+.custom-checkbox > input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+/* для элемента label, связанного с .custom-checkbox */
+.custom-checkbox > span {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+
+/* создание в label псевдоэлемента before со следующими стилями */
+.custom-checkbox > span::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #adb5bd;
+    border-radius: 2px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 65%;
+}
+
+/* стили при наведении курсора на checkbox */
+.custom-checkbox > input:not(:disabled):not(:checked) + span:hover::before {
+    /* border-color: #b3d7ff; */
+}
+
+/* стили для активного чекбокса (при нажатии на него) */
+.custom-checkbox > input:not(:disabled):active + span::before {
+    /* background-color: #b3d7ff;
+    border-color: #b3d7ff; */
+}
+
+/* стили для чекбокса, находящегося в фокусе */
+.custom-checkbox > input:focus + span::before {
+    /* box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); */
+}
+
+/* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+.custom-checkbox > input:focus:not(:checked) + span::before {
+    /* border-color: #80bdff; */
+}
+
+/* стили для чекбокса, находящегося в состоянии checked */
+.custom-checkbox > input:checked + span::before {
+    border-color: #0b76ef;
+    background-color: #0b76ef;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+/* стили для чекбокса, находящегося в состоянии disabled */
+.custom-checkbox > input:disabled + span::before {
+    background-color: #e9ecef;
+}
+
+/* column-left-list */
+.column-left-list {
+    row-gap: 18px;
+    margin-top: 18px;
+}
+.card {
+    padding: 20px 16px;
+}
+.card-title {
+    font-family: Fixel Display;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24.2px;
+    color: #000;
+}
+.card-desc {
+    font-family: Fixel Display;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+    letter-spacing: 0.01em;
+    color: #484a58;
+    margin-top: 6px;
+}
+.card-heading img {
+    max-width: 112px;
+}
+
+.detail img {
+    min-width: 20px;
+}
+.card-icons {
+    margin-top: 12px;
+    column-gap: 10px;
+}
+.card-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 10px;
+}
+.card-icons-item.open .card-info {
+    display: flex;
+}
+.card-icons-item.open {
+    flex-direction: column;
+    align-items: flex-start;
+}
+.card-icons-item.open .card-icons-title {
+    display: block;
+}
+.card-icons-title,
+.card-info {
+    display: none;
+}
+.card-info {
+    margin-top: 10px;
+    column-gap: 8px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ECECEC;
+}
+.card-info button {
+    column-gap: 8px;
+    width: max-content;
+}
+.card-info button svg {
+    min-width: 20px;
+}
+.card-info-head {
+    column-gap: 10px;
+}
+.card-icons li {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.36px;
+    color: #4caf50;
+}
+.card-icons-title {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.94px;
+    color: #000000;
+}
+.card-icons img {
+    width: 20px;
+    height: 20px;
+}
+.btn-card {
+    padding: 10px 12px;
+    background-color: #ebf8ff;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 14px;
+    text-align: left;
+    color: #007df1;
+    text-wrap: nowrap;
+}
+.card-group {
+    column-gap: 10px;
+}
+.card-icons-title-green {
+    color: #4CAF50;
+}
+.card-icons-title-red {
+    color: #F44336;
+}
+.card-icons-title-primary {
+    color: #007DF1;
+}
+.card-icons li:nth-child(n+4) {
+    display: none;
+}
+.card-icons.open li:nth-child(n+4) {
+    display: block;
+}
+.card-icons li:last-child {
+    display: flex;
+}
+.card-icons.open li:last-child .more-information::after {
+    transform: rotate(180deg);
+}
+.more-information{
+    display: flex !important;
+    align-items: center;
+    column-gap: 10px;
+}
+.more-information::after {
+    content: "";
+    width: 10px;
+    height: 5px;
+    margin-top: -2px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.50012L6 6.50012L11 1.50012' stroke='%23007DF1' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+}
+.action {
+    border-bottom: 1px solid #ECECEC;
+    padding-bottom: 10px;
+}
+.action-list {
+    column-gap: 10px;
+}
+.action-list button {
+    border-color: #007DF1;
+    height: 100%;
+}
+.driver .card-icons-title,
+.action .card-icons-title {
+    display: block;
+}
+.avatar {
+    width: 40px;
+    height: 40px;
+}
+.driver .card-group {
+    row-gap: 4px;
 }

@@ -60,5 +60,9 @@ $(document).ready(function() {
     });
 
 
+    // раскрытие дополнительной информации
+    $(document).on("click", ".more-information", function(e) {
+        $(".card-icons").toggleClass("open")
+    });
     
 });

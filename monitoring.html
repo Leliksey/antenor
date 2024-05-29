@@ -49,10 +49,10 @@
                     <button type="button" class="btn-nav-left"><img src="assets/img/chevron-left.png" alt=""></button>
                     <ul class="navbar-nav navbar-nav-scroll">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#"><img src="assets/img/monitoring_icon.svg" alt="">Дашборд</a>
+                            <a class="nav-link active" href="index.html"><img src="assets/img/monitoring_icon.svg" alt="">Дашборд</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><img src="assets/img/monitoring_icon.svg" alt="">Мониторинг</a>
+                            <a class="nav-link" href="monitoring.html"><img src="assets/img/monitoring_icon.svg" alt="">Мониторинг</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#"><img src="assets/img/location_icon.svg" alt="">Треки</a>
@@ -101,22 +101,173 @@
                 </div>
             </div>
             <div class="toolbar d-flex justify-content-between">
-                <div class="toolbar-left d-flex">
+                <div class="toolbar-left d-flex align-items-center">
                     <button class="btn btn-primary btn-tool"><i class="fas fa-plus"></i></button>
                     <button class="btn btn-primary btn-tool"><i class="fas fa-cog"></i></button>
                     <div class="btn-group toolbar-sort rounded">
                         <button class="btn btn-light"><i class="fas fa-sort-alpha-down"></i></button>
                         <button class="btn btn-light"><i class="fas fa-sort-alpha-up"></i></button>
                     </div>
-                    <div class="btn-group">
-                        <button class="btn btn-light"><i class="fas fa-th-large"></i></button>
-                        <button class="btn btn-light"><i class="fas fa-bars"></i> All</button>
-                        <button class="btn btn-light"><i class="fas fa-list"></i></button>
+                    <div class="btn-group sort-toolbar d-flex align-items-center">
+                        <button class="btn p-0"><i class="fas fa-th-large"></i></button>
+                        <button class="btn p-0"><i class="fas fa-bars"></i> All</button>
+                        <button class="btn p-0"><i class="fas fa-list"></i></button>
                     </div>
                 </div>
-                <div class="toolbar-right">
-                    <button class="btn btn-danger"><i class="fas fa-times"></i></button>
-                    <button class="btn btn-primary"><i class="fas fa-check"></i></button>
+                <div class="toolbar-right d-flex align-items-center">
+                    <button class="btn p-0">
+                        <img src="assets/img/close.svg" alt="">
+                    </button>
+                    <label class="custom-checkbox">
+                        <input type="checkbox" value="value-1">
+                        <span></span>
+                    </label>
+                </div>
+            </div>
+            <div class="column-left-list d-flex flex-column">
+                <div class="container">
+                    <div class="col-12 card card-custom rounded bordered">
+                        <div class="row card-heading">
+                            <div class="col-5">
+                                <div class="card-title">АА3524РК</div>
+                                <div class="card-desc">Audi Q5</div>
+                            </div>
+                            <div class="col-7 d-flex justify-content-between">
+                                <img src="assets/img/car2.png" alt="">
+                                <div class="toolbar-right d-flex align-items-center">
+                                    <button class="btn p-0">
+                                        <img src="assets/img/close.svg" alt="">
+                                    </button>
+                                    <label class="custom-checkbox p-0">
+                                        <input type="checkbox" value="value-1">
+                                        <span></span>
+                                    </label>
+                                    <button class="detail p-0">
+                                        <img src="assets/img/detail_icon.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="card-icons d-flex ">
+                            <li class="card-icons-item open">
+                                <div class="card-info-head d-flex align-items-center">
+                                    <img src="assets/img/geo.svg" alt="">
+                                    <div class="card-icons-title">Назарівська Вулиця, Київ, Україна</div>
+                                </div>
+                                <div class="card-info">
+                                    <button class="col-5 btn btn-card rounded d-flex align-items-center justify-content-center">Найти на карте
+                                        <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M16.1665 9.99996C16.1665 13.6819 13.1817 16.6666 9.49984 16.6666M16.1665 9.99996C16.1665 6.31806 13.1817 3.33329 9.49984 3.33329M16.1665 9.99996H17.8332M9.49984 16.6666C5.81794 16.6666 2.83317 13.6819 2.83317 9.99996M9.49984 16.6666V18.3333M2.83317 9.99996C2.83317 6.31806 5.81794 3.33329 9.49984 3.33329M2.83317 9.99996H1.1665M9.49984 3.33329V1.66663M11.9998 9.99996C11.9998 11.3807 10.8805 12.5 9.49984 12.5C8.11913 12.5 6.99984 11.3807 6.99984 9.99996C6.99984 8.61925 8.11913 7.49996 9.49984 7.49996C10.8805 7.49996 11.9998 8.61925 11.9998 9.99996Z" stroke="#007DF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                            
+                                    </button>
+                                    <button class="col-5 btn btn-card rounded d-flex align-items-center justify-content-center">Обновить данные
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.6665 8.33333C1.6665 8.33333 3.33732 6.05685 4.6947 4.69854C6.05208 3.34022 7.92783 2.5 9.99984 2.5C14.142 2.5 17.4998 5.85786 17.4998 10C17.4998 14.1421 14.142 17.5 9.99984 17.5C6.58059 17.5 3.69576 15.2119 2.79298 12.0833M1.6665 8.33333V3.33333M1.6665 8.33333H6.6665" stroke="#007DF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                    <button class="col btn btn-card rounded">
+                                        <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.0421 6H3.08333C1.93274 6 1 5.06726 1 3.91667C1 2.76607 1.93274 1.83333 3.08333 1.83333H11.0421M5.95791 15.1667H13.9167C15.0673 15.1667 16 14.2339 16 13.0833C16 11.9327 15.0673 11 13.9167 11H5.95791M1 13.0833C1 14.6942 2.30584 16 3.91667 16C5.5275 16 6.83333 14.6942 6.83333 13.0833C6.83333 11.4725 5.5275 10.1667 3.91667 10.1667C2.30584 10.1667 1 11.4725 1 13.0833ZM16 3.91667C16 5.5275 14.6942 6.83333 13.0833 6.83333C11.4725 6.83333 10.1667 5.5275 10.1667 3.91667C10.1667 2.30584 11.4725 1 13.0833 1C14.6942 1 16 2.30584 16 3.91667Z" stroke="#007DF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="card-icons-item open w-100">
+                                <div class="card-info-head d-flex align-items-center justify-content-between w-100">
+                                    <div class="card-group d-flex align-items-center w-100">
+                                        <div class="card-icons-title">Заряд батареи:</div>
+                                        <img src="assets/img/battery.svg" alt="">
+                                        <div class="card-icons-title"><b>5%</b></div>
+                                    </div>
+                                    <div class="icon-lock">
+                                        <img src="assets/img/icon_lock.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="card-group mt-10">
+                                    <div class="card-icons-title">Прицеп:</div>
+                                    <div class="card-icons-title card-icons-title-red">Не назначен</div>
+                                </div>
+                            </li>
+                            <li class="card-icons-item open">
+                                <div class="card-group d-flex align-items-center w-100">
+                                    <div class="card-icons-title">Обновление данных: </div>
+                                    <img src="assets/img/fuel.svg" alt="">
+                                </div>
+                            </li>
+                            <li class="card-icons-item open">
+                                <div class="card-group d-flex align-items-center w-100">
+                                    <div class="card-icons-title">Статус: </div>
+                                    <img src="assets/img/status.svg" alt="">
+                                </div>
+                            </li>
+                            <li class="card-icons-item open ">
+                                <div class="card-group d-flex align-items-center w-100">
+                                    <div class="card-icons-title">Сигнал: </div>
+                                    <div class="status status-green"></div>
+                                    <div class="card-icons-title card-icons-title-green">GPRS</div>
+                                </div>
+                            </li>
+                            <li class="card-icons-item open">
+                                <button class="card-icons-title card-icons-title-primary fw-500 more-information p-0">Детальнее</button>
+                            </li>
+                        </ul>
+                        <div class="action mt-10">
+                            <div class="card-icons-title">Действия:</div>
+                            <ul class="action-list d-flex mt-10">
+                                <li>
+                                    <button class="btn btn-card rounded d-flex align-items-center justify-content-center bordered">
+                                        <img src="assets/img/btn_grafic.svg" alt="">
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="btn btn-card rounded d-flex align-items-center justify-content-center bordered">
+                                        <img src="assets/img/btn_image.svg" alt="">
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="btn btn-card rounded d-flex align-items-center justify-content-center bordered">
+                                        <img src="assets/img/btn_video.svg" alt="">
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="btn btn-card rounded d-flex align-items-center justify-content-center bordered">
+                                        <img src="assets/img/btn_telegram.svg" alt="">
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="btn btn-card rounded d-flex align-items-center justify-content-center bordered">
+                                        <img src="assets/img/btn_message.svg" alt="">
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="btn btn-card rounded d-flex align-items-center justify-content-center bordered">
+                                        <img src="assets/img/btn_capture.svg" alt="">
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="btn btn-card rounded d-flex align-items-center justify-content-center bordered">
+                                        <img src="assets/img/btn_play.svg" alt="">
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="driver mt-10 d-flex align-items-center justify-content-between">
+                            <div class="card-group d-flex align-items-center">
+                                <img src="assets/img/avatar_default.svg" alt="" class="avatar">
+                                <div class="card-group d-flex flex-column">
+                                    <div class="card-icons-title">Водитель</div>
+                                    <div class="card-icons-title"><b>Водитель не назначен</b></div>
+                                    <div class="card-icons-title">код: - <span></span></div>
+                                </div>
+                            </div>
+                            <div>
+                                <button class="btn btn-card rounded d-flex align-items-center justify-content-center">
+                                    <img src="assets/img/message-text.svg" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
