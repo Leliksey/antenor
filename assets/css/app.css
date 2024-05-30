@@ -31,6 +31,9 @@ h3 {
 .fw-700 {
     font-weight: 700 !important;
 }
+.gap-10 {
+    gap: 10px
+}
 /* navbar */
 .navbar {
     padding: 20px 5px;
@@ -1009,6 +1012,17 @@ col.top {
     color: #484a58;
     margin-top: 6px;
 }
+.card-icons-preview {
+    display: flex;
+    column-gap: 10px;
+    margin-top: 10px;
+}
+.card-custom.open .card-icons-preview {
+    display: none;
+}
+.card-icons-preview img {
+    min-width: 20px;
+}
 .card-heading img {
     max-width: 112px;
 }
@@ -1016,29 +1030,48 @@ col.top {
 .detail img {
     min-width: 20px;
 }
+.detail.open img {
+    transform: rotate(180deg);
+}
+.card-information {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .card-icons {
     margin-top: 12px;
     column-gap: 10px;
 }
 .card-icons {
-    display: flex;
     flex-direction: column;
     align-items: flex-start;
     row-gap: 10px;
 }
-.card-icons-item.open .card-info {
-    display: flex;
+.card-icons-item {
+    margin-top: 10px;
+    width: 100%;
 }
-.card-icons-item.open {
-    flex-direction: column;
-    align-items: flex-start;
-}
-.card-icons-item.open .card-icons-title {
-    display: block;
-}
-.card-icons-title,
-.card-info {
-    display: none;
+.card-icons-item .status {
+    margin-top: -3px;
 }
 .card-info {
     margin-top: 10px;
@@ -1056,14 +1089,14 @@ col.top {
 .card-info-head {
     column-gap: 10px;
 }
-.card-icons li {
-    display: flex;
-    align-items: center;
-    column-gap: 5px;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 19.36px;
-    color: #4caf50;
+.card-icons-item:nth-child(n+4) {
+    display: none;
+}
+.card-icons.open .card-icons-item:nth-child(n+4) {
+    display: block;
+}
+.card-icons-item-more {
+    display: flex !important;
 }
 .card-icons-title {
     font-size: 14px;
@@ -1084,6 +1117,7 @@ col.top {
     text-align: left;
     color: #007df1;
     text-wrap: nowrap;
+    position: relative;
 }
 .card-group {
     column-gap: 10px;
@@ -1097,16 +1131,7 @@ col.top {
 .card-icons-title-primary {
     color: #007DF1;
 }
-.card-icons li:nth-child(n+4) {
-    display: none;
-}
-.card-icons.open li:nth-child(n+4) {
-    display: block;
-}
-.card-icons li:last-child {
-    display: flex;
-}
-.card-icons.open li:last-child .more-information::after {
+.card-icons.open .more-information::after {
     transform: rotate(180deg);
 }
 .more-information{
@@ -1124,7 +1149,7 @@ col.top {
     display: block;
     background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.50012L6 6.50012L11 1.50012' stroke='%23007DF1' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
 }
-.action {
+.card-custom.open .action  {
     border-bottom: 1px solid #ECECEC;
     padding-bottom: 10px;
 }
@@ -1135,14 +1160,19 @@ col.top {
     border-color: #007DF1;
     height: 100%;
 }
-.driver .card-icons-title,
-.action .card-icons-title {
-    display: block;
-}
 .avatar {
     width: 40px;
     height: 40px;
 }
 .driver .card-group {
     row-gap: 4px;
+}
+.notification {
+    width: 12px;
+    height: 12px;
+    background-color: #FF0000;
+    border-radius: 50%;
+    position: absolute;
+    top: 7px;
+    right: 7px;
 }

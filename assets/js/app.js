@@ -61,8 +61,23 @@ $(document).ready(function() {
 
 
     // раскрытие дополнительной информации
+    $(".detail").click(function() {
+        $(".card-information").slideToggle();
+        $(".card-custom, .detail").toggleClass("open");
+    });
     $(document).on("click", ".more-information", function(e) {
-        $(".card-icons").toggleClass("open")
+        $(".card-icons").toggleClass("open");
+    });
+    
+
+    // выбор всех чекбоксов
+    $(document).on("click", ".toolbar input[type='checkbox']", function() {
+        if($(this).is(":checked")) {
+            $(".card input[type='checkbox']").prop("checked", true);
+        } else {
+            $(".card input[type='checkbox']").prop("checked", false);
+        }
+            
     });
     
 });
